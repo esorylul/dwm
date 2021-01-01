@@ -84,6 +84,9 @@ static const char *soundDown[] = { "amixer", "set", "Master", "5%-", NULL };
 static const char *soundUp[] = { "amixer", "set", "Master", "5%+", NULL };
 static const char *lightDown[] = { "xbacklight", "-dec", "5", NULL };
 static const char *lightUp[] = { "xbacklight", "-inc", "5", NULL };
+static const char *qv2ray[] = { "qv2ray", NULL };
+static const char *killQv2ray[] = { "pkill", "qv2ray", NULL };
+static const char *killDwm[] = { "pkill", "dwm", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -95,6 +98,9 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_u,      spawn,          {.v =soundUp} },
 	{ MODKEY,				        XK_d,      spawn,          {.v =lightDown} },
 	{ MODKEY,				        XK_u,      spawn,          {.v =lightUp} },
+	{ MODKEY,				        XK_v,      spawn,          {.v =qv2ray} },
+	{ MODKEY|ShiftMask,				XK_v,      spawn,          {.v =killQv2ray} },
+	{ MODKEY|ShiftMask,				XK_w,      spawn,          {.v =killDwm} },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstackvis,  {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstackvis,  {.i = -1 } },
