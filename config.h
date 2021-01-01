@@ -102,7 +102,7 @@ static Key keys[] = {
 	{ MODKEY,				        XK_v,      spawn,          {.v =qv2ray} },
 	{ MODKEY|ShiftMask,				XK_v,      spawn,          {.v =killQv2ray} },
 	{ MODKEY|ShiftMask,				XK_w,      spawn,          {.v =killDwm} },
-	{ MODKEY,					 	XK_m,      spawn,          {.v =netMusic} },
+	{ MODKEY,					 	XK_n,      spawn,          {.v =netMusic} },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstackvis,  {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstackvis,  {.i = -1 } },
