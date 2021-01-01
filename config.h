@@ -13,9 +13,9 @@ static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int showsystray        = 1;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
-static const int topbar             = 1;        /* 0 means bottom bar */
+static const int topbar             = 0;        /* 0 means bottom bar */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
-static const char *fonts[]          = { "SauceCodePro Nerd Font:size=16" };
+static const char *fonts[]          = { "SauceCodePro Nerd Font:size=14" };
 static const char dmenufont[]       = "SauceCodePro Nerd Font:size=16";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
@@ -80,6 +80,10 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *chromiumcmd[]  = { "chromium", "--proxy-server=127.0.0.1:8889", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
+static const char *soundDown[] = { "amixer", "set", "Master", "5%-", NULL };
+static const char *soundUp[] = { "amixer", "set", "Master", "5%+", NULL };
+static const char *lightDown[] = { "xbacklight", "-dec", "5", NULL };
+static const char *lightUp[] = { "xbacklight", "-inc", "5", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -87,6 +91,10 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_Return,  togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_c,      spawn,          {.v = chromiumcmd } },
+	{ MODKEY|ShiftMask,             XK_d,      spawn,          {.v =soundDown } },
+	{ MODKEY|ShiftMask,             XK_u,      spawn,          {.v =soundUp} },
+	{ MODKEY,				        XK_d,      spawn,          {.v =lightDown} },
+	{ MODKEY,				        XK_u,      spawn,          {.v =lightUp} },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstackvis,  {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstackvis,  {.i = -1 } },
