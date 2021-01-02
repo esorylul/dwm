@@ -88,6 +88,8 @@ static const char *qv2ray[] = { "qv2ray", NULL };
 static const char *killQv2ray[] = { "pkill", "qv2ray", NULL };
 static const char *killDwm[] = { "pkill", "dwm", NULL };
 static const char *netMusic[] = { "netease-cloud-music", NULL };
+static const char *slock[] = { "slock", NULL };
+static const char *flameshot[] = { "flameshot", |, "gui", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -103,6 +105,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,				XK_v,      spawn,          {.v =killQv2ray} },
 	{ MODKEY|ShiftMask,				XK_w,      spawn,          {.v =killDwm} },
 	{ MODKEY,					 	XK_n,      spawn,          {.v =netMusic} },
+	{ MODKEY|ShiftMask,				XK_l,      spawn,          {.v =slock} },
+	{ MODKEY|ShiftMask,				XK_a,      spawn,          {.v =flameshot} },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstackvis,  {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstackvis,  {.i = -1 } },
