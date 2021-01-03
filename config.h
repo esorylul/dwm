@@ -15,8 +15,8 @@ static const int showsystray        = 1;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
-static const char *fonts[]          = { "SauceCodePro Nerd Font:size=14" };
-static const char dmenufont[]       = "SauceCodePro Nerd Font:size=16";
+static const char *fonts[]          = { "SauceCodePro Nerd Font:size=14", "NotoColorEmoji:size=16"};
+static const char *dmenufont[]       = { "SauceCodePro Nerd Font:size=16", "NotoColorEmoji:size=16"};
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -89,7 +89,7 @@ static const char *killQv2ray[] = { "pkill", "qv2ray", NULL };
 static const char *killDwm[] = { "pkill", "dwm", NULL };
 static const char *netMusic[] = { "netease-cloud-music", NULL };
 static const char *slock[] = { "slock", NULL };
-static const char *flameshot[] = { "flameshot", |, "gui", NULL };
+static const char *flameshot[] = { "flameshot", "gui", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
