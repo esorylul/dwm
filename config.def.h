@@ -79,7 +79,9 @@ static const char *dmenucmd[] = { "dmenu_run", "-c", "-F", "-m", dmenumon, "-l",
 static const char *termcmd[]  = { "st", NULL };
 static const char *chromiumcmd[]  = { "google-chrome-stable", "--proxy-server=127.0.0.1:8889", NULL };
 static const char scratchpadname[] = "scratchpad";
+static const char calcursename[] = "calcurseapp";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
+static const char *calcurse[] = { "st", "-t", calcursename, "-g", "80x34", "-e", "calcurse", NULL };
 static const char *soundDown[] = { "amixer", "set", "Master", "5%-", NULL };
 static const char *soundUp[] = { "amixer", "set", "Master", "5%+", NULL };
 static const char *lightDown[] = { "xbacklight", "-dec", "5", NULL };
@@ -98,6 +100,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_Return,  togglescratch,  {.v = scratchpadcmd } },
+	{ MODKEY|ShiftMask|ControlMask, XK_Return,  togglecalcurse,  {.v = calcurse} },
 	{ MODKEY,                       XK_c,      spawn,          {.v = chromiumcmd } },
 	{ MODKEY|ShiftMask,             XK_d,      spawn,          {.v =soundDown } },
 	{ MODKEY|ShiftMask,             XK_u,      spawn,          {.v =soundUp} },
