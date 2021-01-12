@@ -90,6 +90,8 @@ static const char *killDwm[] = { "pkill", "dwm", NULL };
 static const char *netMusic[] = { "netease-cloud-music", NULL };
 static const char *slock[] = { "slock",  NULL };
 static const char *flameshot[] = { "flameshot", "gui", NULL };
+static const char *libreoffice[] = { "libreoffice", NULL };
+static const char *sendanywhere[] = { "sendanywhere", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -107,6 +109,8 @@ static Key keys[] = {
 	{ MODKEY,					 	XK_n,      spawn,          {.v =netMusic} },
 	{ MODKEY|ShiftMask|ControlMask, XK_l,      spawn,          {.v =slock} },
 	{ MODKEY|ShiftMask,				XK_a,      spawn,          {.v =flameshot} },
+	{ MODKEY,						XK_f,      spawn,          {.v =libreoffice} },
+	{ MODKEY,						XK_a,      spawn,          {.v =sendanywhere} },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstackvis,  {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstackvis,  {.i = -1 } },
@@ -136,7 +140,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,                       XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
-	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
+	{ MODKEY|ShiftMask,             XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
