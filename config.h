@@ -99,13 +99,13 @@ static Key keys[] = {
 	{ MODKEY,                       XK_c,      spawn,          {.v = chromiumcmd } },
 	{ MODKEY|ShiftMask,             XK_d,      spawn,          {.v =soundDown } },
 	{ MODKEY|ShiftMask,             XK_u,      spawn,          {.v =soundUp} },
-	{ MODKEY,				        XK_d,      spawn,          {.v =lightDown} },
-	{ MODKEY,				        XK_u,      spawn,          {.v =lightUp} },
+	{ MODKEY|ControlMask,			XK_d,      spawn,          {.v =lightDown} },
+	{ MODKEY|ControlMask,			XK_u,      spawn,          {.v =lightUp} },
 	{ MODKEY,				        XK_v,      spawn,          {.v =qv2ray} },
 	{ MODKEY|ShiftMask,				XK_v,      spawn,          {.v =killQv2ray} },
 	{ MODKEY|ShiftMask,				XK_w,      spawn,          {.v =killDwm} },
 	{ MODKEY,					 	XK_n,      spawn,          {.v =netMusic} },
-	{ MODKEY|ShiftMask,				XK_l,      spawn,          {.v =slock} },
+	{ MODKEY|ShiftMask|ControlMask, XK_l,      spawn,          {.v =slock} },
 	{ MODKEY|ShiftMask,				XK_a,      spawn,          {.v =flameshot} },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstackvis,  {.i = +1 } },
@@ -163,8 +163,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ MODKEY,                       XK_s,      show,           {0} },
-	{ MODKEY,                       XK_h,      hide,           {0} },
+	//{ MODKEY,                       XK_s,      show,           {0} },
+	//{ MODKEY,                       XK_h,      hide,           {0} },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
